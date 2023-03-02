@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_113221) do
+ActiveRecord::Schema.define(version: 2023_03_02_084014) do
 
   create_table "games", force: :cascade do |t|
     t.string "title"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 2021_07_19_113221) do
     t.integer "game_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "#<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x000055ce037b0378>"
   end
 
 end
